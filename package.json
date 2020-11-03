@@ -4,12 +4,16 @@
     "repository": "https://github.com/Bert0324/webpack-module-demo.git",
     "author": "yuchen.huang <“yuchen.huang@wz-inc.com”>",
     "license": "MIT",
+    "sideEffects": false,
     "scripts": {
         "cross-env": "cross-env TS_NODE_PROJECT=\"./tsconfig.build.json\"",
         "dev": "yarn cross-env webpack-dev-server --config \"./webpack.config.ts\"",
+        "serve:es6": "ts-node src/es6/index.ts",
+        "serve:commonJs": "ts-node src/commonJs/index.ts",
         "build:main": "yarn cross-env webpack --config \"./webpack.config.ts\" --progress --display-modules",
         "build:library": "yarn cross-env webpack --config \"./webpack.config.library.ts\" --progress --display-modules",
         "clean": "rm -r dist",
+        "serve": "yarn serve:commonJs && yarn serve:es6",
         "build": "yarn build:library && yarn build:main"
     },
     "devDependencies": {

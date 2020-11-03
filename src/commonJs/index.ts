@@ -1,3 +1,9 @@
-const logger = require('./export');
+const dependency = require('./export');
+const notUsed = require('./static');
 
-logger();
+console.log(this);
+dependency.logger();
+console.log(dependency.sideEffectValue, dependency.sideEffectObject.v);
+dependency.changeSideEffect();
+dependency.logger();
+console.log(dependency.sideEffectValue, dependency.sideEffectObject.v);
