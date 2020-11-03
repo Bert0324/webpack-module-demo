@@ -4,7 +4,7 @@
     "repository": "https://github.com/Bert0324/webpack-module-demo.git",
     "author": "yuchen.huang <“yuchen.huang@wz-inc.com”>",
     "license": "MIT",
-    "sideEffects": false,
+    "sideEffects": true,
     "scripts": {
         "cross-env": "cross-env TS_NODE_PROJECT=\"./tsconfig.build.json\"",
         "dev": "yarn cross-env webpack-dev-server --config \"./webpack.config.ts\"",
