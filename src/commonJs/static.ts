@@ -1,4 +1,1 @@
-console.log('static import');
-module.exports = {
-    staticExport: 1 
-};
+export const a = 1;

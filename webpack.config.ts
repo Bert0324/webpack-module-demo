@@ -1,7 +1,7 @@
 import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const modules = ['es6', 'commonJS', 'libraryImport', 'asyncImport'];
+const modules = ['es6', 'commonJS', 'libraryImport', 'asyncImport', 'class'];
 const module = process.env.MODULE;
 const isDev = modules.includes(module);
 if (module && !isDev) {
@@ -16,6 +16,12 @@ export default {
     output: {
         path: `${__dirname}/dist`,
         filename: `[name].min.js`,
+        ...(module === 'class'
+            ? {
+                  library: 'webpack-demo',
+                  libraryTarget: 'umd',
+              }
+            : {}),
     },
     target: 'web',
     module: {
