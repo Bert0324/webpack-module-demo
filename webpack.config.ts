@@ -54,6 +54,7 @@ export default {
     },
     optimization: {
         minimize: false,
+        usedExports: true
     },
     devServer: {
         contentBase: `${__dirname}/dist`,
