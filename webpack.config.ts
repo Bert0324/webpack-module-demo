@@ -1,7 +1,7 @@
 import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const modules = ['es6', 'commonJS', 'libraryImport', 'asyncImport', 'class'];
+const modules = ['es6', 'commonJS', 'libraryImport', 'asyncImport', 'class', 'treeShaking'];
 const module = process.env.MODULE;
 const isDev = modules.includes(module);
 if (module && !isDev) {
@@ -10,7 +10,7 @@ if (module && !isDev) {
 export default {
     mode: 'production',
     entry: (isDev ? [module] : modules).reduce((entry, moduleName) => {
-        entry[moduleName] = `${__dirname}/src/${moduleName}/index.ts`;
+        entry[moduleName] = `${__dirname}/src/${moduleName}/index`;
         return entry;
     }, <any>{}),
     output: {

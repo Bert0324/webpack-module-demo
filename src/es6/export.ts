@@ -9,3 +9,6 @@ export const changeSideEffect = () => {
 };
 export { sideEffectValue, sideEffectObject };
 
+
+export const aaaaa = '1111';
+
