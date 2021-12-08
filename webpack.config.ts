@@ -53,8 +53,7 @@ export default {
         mainFields: ['jsnext:main', 'browser', 'module', 'main'],
     },
     optimization: {
-        minimize: false,
-        usedExports: true
+        minimize: true,
     },
     devServer: {
         contentBase: `${__dirname}/dist`,
