@@ -1,0 +1,12 @@
+{
+  "name": "a",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "scripts": {
+    "build": "webpack --config ./webpack.config.ts"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  }
+}
